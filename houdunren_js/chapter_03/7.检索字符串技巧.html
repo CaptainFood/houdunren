@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        string.indexOf(searchvalue,start)
+        string.lastIndexOf(searchvalue,start)
+        string.includes(searchvalue,start)  start默认0;
+        string.startsWith(searchvalue,start)
+        string.endsWith(searchvalue,start)
+        array.some(function(currentValue,index,arr),thisValue)
+            some()方法用于检测数组中的元素是否满足指定条件（函数提供）
+            some()方法会依次执行数组的每个元素：
+                如果有一个元素满足条件，则表达式返回true，剩余的元素不再执行检测
+                如果没有满足条件的元素，则返回false
+            注意：some()不会对空数组进行检测。
+                  some()不会改变元素组。
+        */
+
+      const hd = "houdunren.com";
+      //   if (hd.indexOf("h") != -1) {
+      //     console.log("找到了");
+      //   }
+
+      console.log(hd.indexOf("o"));
+      console.log(hd.lastIndexOf("o"));
+      console.log(hd.includes("h", 0)); //true
+      console.log(hd.startsWith("h")); //true
+      console.log(hd.endsWith("com")); //true
+
+      const keywords = ["php", "css"];
+      const string = "我喜欢在后盾人学习php和css知识";
+      const status = keywords.some(word => {
+        return string.includes(word);
+      });
+      if (status) {
+        console.log("找到了关键词");
+      } else {
+        console.log("找不到关键词");
+      }
+    </script>
+  </body>
+</html>

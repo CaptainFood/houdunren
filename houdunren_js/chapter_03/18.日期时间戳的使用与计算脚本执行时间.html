@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const date = new Date();
+      console.log(date);
+      console.log(typeof date); // object
+      console.log(date * 1); // 返回时间戳
+
+      const hd = Date();
+      console.log(hd);
+      console.log(typeof hd); // string
+      console.log(hd * 1); // NaN
+
+      //   获取时间戳  后三位是毫秒
+      const nowdate = Date.now();
+      console.log(nowdate);
+
+      const start = Date.now();
+      for (let i = 0; i < 1000000; i++) {}
+      const end = Date.now();
+      console.log(`用时${(end - start) / 1000}秒`);
+
+      console.time("abc"); //执行到此行用时
+      for (let i = 0; i < 1000000; i++) {}
+      for (let i = 0; i < 1000000; i++) {}
+      console.timeEnd("abc"); //执行到此行用时
+
+      const newdate = new Date("1996-8-4 12:33:44");
+      console.log(newdate);
+      console.log(newdate.getMonth()); // 7  月份是从0开始算的
+
+      const numDate = new Date(1996, 7, 4, 12, 32, 33);
+      console.log(numDate);
+
+      const arr = [1996, 7, 4, 12, 23, 33];
+      const arrDate = new Date(...arr);  // 使用展开语法把数组里的数取出来
+      console.log(arrDate);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const date = new Date('2020-2-18 10:53:21')
+        console.log(date);
+        
+        // 获取时间戳
+        console.log(date*1);
+        console.log(Number(date));
+        console.log(date.valueOf());
+        console.log(date.getTime());
+        
+        // 时间戳转ISO
+        const timestamp = date.valueOf();
+        console.log(new Date(timestamp));
+    </script>
+</body>
+</html>

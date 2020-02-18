@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        border: solid 1px #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      li > a {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      /*
+      标签模板
+        模板字符串可以紧跟在一个函数名后面，
+        该函数将被调用来处理这个模板字符串。这被称为“标签模板”功能（tagged template）
+      */
+
+      let name = "后盾人";
+      let web = "houdunren.com";
+      let message = tag`在线教程${name}，网址是${web}。`;
+
+      function tag(strings, ...vars) {
+        console.log(vars);
+        console.log(strings);
+        return 1;
+      }
+
+      console.log(message); //1
+
+      let lessons = [
+        {
+          title: "后盾人媒体查询响应式布局",
+          author: "后盾人向军"
+        },
+        {
+          title: "Flex 弹性盒模型",
+          author: "后盾人"
+        },
+        {
+          title: "GRID 栅格系统后盾人教程",
+          author: "古老师"
+        }
+      ];
+
+      function template() {
+        return `<ul>${lessons
+          .map(item => links`<li>作者:${item.author}, 课程:${item.title}</li>`)
+          .join("")}</ul>
+            `;
+      }
+
+      //字符串string.replace(searchValue,newValue)
+      function links(strings, ...vars) {
+        return strings
+          .map((str, key) => {
+            return (
+              str +
+              (vars[key]
+                ? vars[key].replace(
+                    "后盾人",
+                    `<a href='https://www.houdunren.com'>后盾人</a>`
+                  )
+                : "")
+            );
+          })
+          .join("");
+      }
+      document.body.innerHTML += template();
+    </script>
+  </body>
+</html>

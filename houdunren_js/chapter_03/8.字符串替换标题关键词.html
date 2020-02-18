@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        array.reduce(function(total,currentValue,currentIndex,arr),initialValue)
+        reduce()对于空数组是不会执行回调函数的。
+       */
+      const str = "hello world";
+      console.log(str.replace("world", "liaoji"));
+
+      const keyword = ["php", "css"];
+      const string = "我喜欢在后盾人学习php和css知识";
+      const replaceString = keyword.reduce(
+        (pre, word) => pre.replace(word, `<a href="?w=${word}">${word}</a>`),
+        string
+      );
+      console.log(replaceString);
+
+      document.body.innerHTML += replaceString;
+    </script>
+  </body>
+</html>

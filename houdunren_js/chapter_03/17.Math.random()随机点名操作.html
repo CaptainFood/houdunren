@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    Math.random() 0~1之间
+
+      // 取0-5之间的随机整数
+      // Math.floor(Math.random()*(max+1))
+      //   console.log(Math.floor(Math.random() * 6));
+
+      //   取a~b之间的随机整数
+      //   min + Math.floor(Math.random() * (max - min + 1));
+
+      // 取 1-100
+      //   console.log(1 + Math.floor(Math.random() * (100 - 1 + 1)));
+
+
+
+      //   从数组中随机取元素 取index为 0 ~ arr.length-1
+      function randomArrayValue(arr, start = 0, end = arr.length) {
+        const index = start + Math.floor(Math.random() * (end - start));
+        return arr[index];
+      }
+      console.log(randomArrayValue(['张三','李四','王五','老六','全蛋'],2));
+
+     for(let i=0;i<100;i++){
+      console.log(randomArrayValue(['张三','李四','王五','老六','全蛋'],1,4));
+     }
+    </script>
+  </body>
+</html>

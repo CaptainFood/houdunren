@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            replace()方法不改变原始字符串
+        */
+      console.log("*".repeat(3));
+
+      function phone(moble, len = 3) {
+        return moble.slice(0, len * -1) + "*".repeat(len);
+      }
+
+      console.log(phone("15591868501", 4));
+
+      //   处理电话号码
+      function phoneNumber(moble) {
+        return moble.replace(moble.substring(3, 7), "*".repeat(4));
+      }
+      console.log(phoneNumber("15591868501"));
+    </script>
+  </body>
+</html>

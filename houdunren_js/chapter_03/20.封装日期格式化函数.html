@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const date = new Date("1996-8-4 12:11:11");
+
+      //   封装日期格式化函数,传参date和格式
+      function dateFormat(date, format = "YYYY-MM-DD HH:mm:ss") {
+        const config = {
+          YYYY: date.getFullYear(),
+          MM: date.getMonth(),
+          DD: date.getDate(),
+          HH: date.getHours(),
+          mm: date.getMinutes(),
+          ss: date.getSeconds()
+        };
+        for (const key in config) {
+          format = format.replace(key, config[key]);
+        }
+        return format;
+      }
+
+      console.log(dateFormat(date));
+    </script>
+  </body>
+</html>

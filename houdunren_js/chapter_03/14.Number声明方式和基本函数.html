@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = new Number(99);
+        console.log(number);
+        console.log(typeof number);  // object 
+        console.log(number.valueOf());  //99
+        
+        let num = 3.1415926;
+        console.log(Number.isInteger(num));  //false
+        console.log(Number.isInteger(10));  //true
+        
+        console.log(num.toFixed(3));  //3.142  四舍五入保留3位小数
+        
+    </script>
+</body>
+</html>

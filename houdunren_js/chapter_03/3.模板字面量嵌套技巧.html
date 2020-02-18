@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        li:nth-child(odd) {
+            background: #16a085;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function show() {
+            return 'google.com'
+        }
+        let hd = `www.${show()}`;
+        console.log(hd);
+
+        let lessons = [
+            { title: '媒体查询响应式布局' },
+            { title: 'Flex 弹性盒模型' },
+            { title: 'GRID 栅格系统' }
+        ]
+
+        /*
+            map()方法返回一个新数组，不会改变原数组
+            map()方法按照原始数组元素顺序依次处理元素
+            模板字面量的嵌套
+        */
+        function template() {
+            return `
+                <ul>${lessons.map(item => `<li>${item.title}</li>`).join('')}</ul>
+            `
+        }
+        document.body.innerHTML = template()
+
+    </script>
+</body>
+
+</html>

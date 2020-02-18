@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let hd = '3';
+        let arr = [2, 3, 34];
+        let obj = {};
+        function fun() { };
+        let x;
+        console.log(typeof x);  //undefined
+
+        // if (typeof hdjs == 'undefined') {
+        //     throw new Error('变量hdjs没有声明');    //抛出异常
+        // }
+
+        // 数组和对象用typeof检测都是object
+
+        // 非new String()的字符串用instanceof都返回false
+        console.log(typeof hd);  //false 
+
+        console.log(arr instanceof Array);  //true
+
+        function User() { };
+        let lj = new User();
+        console.log(lj instanceof User);  //true
+        console.log(lj instanceof Object);  //true
+
+
+
+    </script>
+</body>
+
+</html>

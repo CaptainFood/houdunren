@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(Number("hello")); // NaN
+      console.log(2 / "hello"); // NaN
+      console.log(NaN == NaN); // false
+      console.log(Number.isNaN(2 / "hello")); // true
+      // Object.is(value1,value2) 判断两个值是否是相同的值
+      console.log(Object.is(NaN, NaN)); //true
+
+      console.log(parseInt("12houduren")); // 12
+      console.log(parseInt("fsd132ccv")); // NaN
+
+      console.log(parseFloat("12.12dfsf")); // 12.12
+    </script>
+  </body>
+</html>

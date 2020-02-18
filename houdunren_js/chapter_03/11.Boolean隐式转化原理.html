@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隐式转换</title>
+  </head>
+  <body>
+    <script>
+      /*
+            valueOf()方法返回Boolean对象的原始值
+        */
+      const boolean = new Boolean(true);
+      console.log(typeof boolean); // object
+      console.log(boolean.valueOf()); // true
+
+      let num = 12;
+      // 与数值进行比较，布尔值转换为数值类型 true转换为1，false转换0
+      console.log(num == true); // false
+      console.log("1" == true); // true
+      console.log("11" == true); //false
+      console.log(Boolean("0")); // true
+      console.log(Boolean(0)); // false
+
+      let arr1 = [1],
+        arr2 = [0, 1];
+      console.log(Number(arr1)); // 1
+      console.log(Number(arr2)); // NaN
+      console.log(arr1 == true); // true
+      console.log(arr2 == true); //false
+
+      // 数组，对象是引用类型， 空数组，空对象转boolean类型
+      console.log(Boolean([])); // true
+      console.log(Boolean({})); // true
+
+      // 注意：比较和转化是两回事
+      if ([]) {
+        console.log("转换成功");
+      }
+    </script>
+  </body>
+</html>
