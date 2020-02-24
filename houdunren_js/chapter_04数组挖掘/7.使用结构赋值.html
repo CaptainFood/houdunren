@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let [name, age] = ["liaoji", 18];
+      //   console.log(name, age);
+
+      //   function get() {
+      //     return ["后盾人", 2020];
+      //   }
+      //   let [classname, year] = get();
+      //   console.log(classname, year);
+
+      //   const [...arr] = "hello World";
+      //   console.log(arr);
+
+      let [name, ...args] = ["后盾人", "houdunren.com", "css"];
+      console.log(name, args);
+
+      let a = ["cms", ...args];
+      console.log(a);
+
+      let [name2, year = 2020] = ["Houdunren"];
+      console.log(name2, year);
+
+      function show([...args]) {
+        console.log(args);
+      }
+      show(["houren", 2023]);
+    </script>
+  </body>
+</html>

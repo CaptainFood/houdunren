@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>div1</div>
+    <div>div2</div>
+    <script>
+      console.log(Array.isArray([])); // true
+
+      let hd = [1, 2, 3].join("~");
+      console.log(hd);
+      console.log(typeof hd); // String
+
+      // 字符串转数组
+      let str = "hdcms";
+      console.log(Array.from(str));
+
+      //   对象转数组(具有index，和length)
+      let obj = {
+        0: "liao",
+        1: "18",
+        length: 2
+      };
+      console.log(Array.from(obj));
+
+      let divs = document.querySelectorAll("div"); // 类数组，有index，length
+      console.log(
+        Array.from(divs, function(item) {
+          item.style.backgroundColor = "red"; // 改变div样式
+          return item; // 返回div
+        })
+      );
+    </script>
+  </body>
+</html>

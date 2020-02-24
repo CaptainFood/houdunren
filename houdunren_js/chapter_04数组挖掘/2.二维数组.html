@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, ["a", "b", "c"], 7, 8, 9];
+      console.table(arr);
+
+      const arr2 = ["a", "b", "c"];
+      arr2[0] = "aaaaa";
+      console.log(arr2);
+
+      const num = 1;
+      num = 2;
+      console.log(num); // 报错Assignment to contant variable.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 23, 4, 5, 7, 55];
+      let res = arr.sort(function(a, b) {
+        return a - b; // 升序
+      });
+
+      console.log(arr, res, arr === res);
+
+      let arr2 = [2, 4, 5, 6, 1];
+      let res2 = arr2.sort(function(a, b) {
+        return b - a; // 降序
+      });
+      console.log(arr2, res2);
+
+      let cart = [
+        { name: "iphone", price: 12000 },
+        { name: "imac", price: 20000 },
+        { name: "ipad", price: 3000 }
+      ];
+      cart = cart.sort(function(a, b) {
+        return a.price - b.price;
+      });
+      console.log(cart);
+    </script>
+  </body>
+</html>

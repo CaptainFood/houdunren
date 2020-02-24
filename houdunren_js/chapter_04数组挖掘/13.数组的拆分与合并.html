@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "hello";
+      let arrStr = str.split("");
+      console.log(arrStr); // ["h", "e", "l", "l", "o"]
+      console.log(arrStr.join("-")); // 'h-e-l-l-o'
+
+      let arr = ["houdunren", "cms"];
+      let hd = [1, 2, 3, 4];
+      let cms = ["js", "css"];
+
+      //   arr = arr.concat(hd, cms);
+      console.log(arr); // ["houdunren", "cms", 1, 2, 3, 4, "js", "css"]
+
+      console.log([...arr, ...hd, ...cms]);
+
+      /*
+        copyWith()方法用于从数组指定位置拷贝元素到数组的另一个指定位置
+        array.copyWith(targetIndex,start,end)
+      */
+      let fruit = ["Banana", "Orange", "Apple", "Mango",'sadf'];
+      fruit.copyWithin(2, 0, 3);
+      console.log(fruit); // ["Banana", "Orange", "Banana", "Orange", "Apple"]
+
+      
+    </script>
+  </body>
+</html>

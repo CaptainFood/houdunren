@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ["a", "b"];
+      let res_pop = arr.pop(); // 返回被删除元素
+      console.log(arr, res_pop); //[a] 'b'
+
+      let res_push = arr.push("b", "c", "d"); // 返回数组长度
+      console.log(arr, res_push); // ["a", "b", "c", "d"] 4
+
+      let res_shift = arr.shift(); // 返回被删除元素
+      console.log(arr, res_shift); // ["b", "c", "d"] "a"
+
+      let res_unshift = arr.unshift("a"); // 返回数组长度
+      console.log(arr, res_unshift); // ["a", "b", "c", "d"] 4
+      
+      /*
+        fill() 方法用于将一个固定值替换数组的元素。
+        array.fill(value,start,end) 
+      */
+      let arr2 = [1, 2, 3, 4];
+      arr2.fill("hello", 1, 3);
+      console.log(arr2); // [1, "hello", "hello", 4]
+    
+        
+    </script>
+  </body>
+</html>

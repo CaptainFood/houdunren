@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+      let hd = arr.slice(); // array.slice(start,end) 返回新数组
+      console.log(hd, arr); //[1, 2, 3, 4, 5]; false
+
+      /*
+          splice()增删改
+          array.splice(start,howmany,item1,...itemX)
+      */
+      let res_add = arr.splice(0, 0, "hello");
+      console.log(arr, res_add); //["hello", 1, 2, 3, 4, 5] []
+
+      let res_del = arr.splice(0, 1); // 如果是删除就返回被删除元素的数组
+      console.log(arr, res_del); //[1, 2, 3, 4, 5] ["hello"]
+
+      let res_update = arr.splice(0, 0, "I am new");
+      console.log(arr, res_update); // ["I am new", 1, 2, 3, 4, 5] []
+    </script>
+  </body>
+</html>

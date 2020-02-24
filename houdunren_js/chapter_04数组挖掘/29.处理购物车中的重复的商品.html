@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 获取价格超过10000的商品的名称
+      let cart = [
+        { name: "iphone", price: 13000 },
+        { name: "ipad", price: 2000 },
+        { name: "imac", price: 20000 }
+      ];
+
+      function getNameByPrice(goods, price) {
+        return goods
+          .reduce(function(arr, cur) {
+            if (cur.price > price) arr.push(cur);
+            return arr;
+          }, [])
+          .map(function(item) {
+            return item.name;
+          });
+      }
+      console.log(getNameByPrice(cart, 10000));
+
+
+      let carts = [
+        { name: "iphone", price: 13000 },
+        { name: "ipad", price: 2000 },
+        { name: "imac", price: 20000 },
+        { name: "ipad", price: 2000 },
+        { name: "iphone", price: 13000 }
+      ];
+
+      function filterGoods(goods) {
+        return carts.reduce(function(arr, cur) {
+          let find = arr.find(function(item) {
+            return item.name == cur.name;
+          });
+          if (!find) arr.push(cur);
+          return arr;
+        }, []);
+      }
+      console.log(filterGoods(carts));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ["张三", "李四", "王五", "老六"];
+      let hd = arr;
+      hd[1] = "老八";
+      console.log(arr);
+      console.table(arr);
+
+      console.time("count");
+      for (let i = 0; i < 199999909; i++) {}
+      console.timeEnd("count");
+    </script>
+  </body>
+</html>

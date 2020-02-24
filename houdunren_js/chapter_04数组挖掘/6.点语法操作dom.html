@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>houdunren.com</div>
+    <div>hdcms.com</div>
+    <div>google.com</div>
+    <script>
+      const divs = document.querySelectorAll("div");
+      console.log(divs);
+
+      //   Array.from()将类数组转数组
+      //   Array.from(divs).map(function(item) {
+      //     console.log(item);
+      //   });
+
+      //   Array.prototype.map.call(divs, function(item) {
+      //     console.log(item);
+      //   });
+
+      [...divs].map(function(item) {
+        item.addEventListener("click", function() {
+          // console.log(this.classList);  //DOMTokenList
+          this.classList.toggle("hide");
+        });
+      });
+    </script>
+  </body>
+</html>

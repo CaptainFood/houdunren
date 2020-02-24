@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 4, 53, 5, 2];
+      for (const i in arr) {
+        console.log(i, arr[i]);
+      }
+
+      function sortFun(arr) {
+        for (let a in arr) {
+          for (let b in arr) {
+            if (arr[a] < arr[b]) {
+              let temp = arr[b];
+              arr[b] = arr[a];
+              arr[a] = temp;
+            }
+          }
+        }
+        return arr;
+      }
+      console.log(sortFun(arr));
+
+      function sortFunction(arr, callback) {
+        for (let a in arr) {
+          for (let b in arr) {
+            if (callback(arr[a], arr[b]) < 0) {
+              let temp = arr[b];
+              arr[b] = arr[a];
+              arr[a] = temp;
+            }
+          }
+        }
+        return arr;
+      }
+      console.log(
+        sortFunction(arr, function(a, b) {
+          return a - b;
+        })
+      );
+    </script>
+  </body>
+</html>

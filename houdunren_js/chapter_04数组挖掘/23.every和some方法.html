@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="title" />
+    <span></span>
+    <script>
+      /*
+            array.every(function(currentValue,index,arr),thisValue)
+            every()方法用于检测数组所有元素是否都符合指定条件
+                1.如果数组中检测到有一个元素不满足，则整个表达式返回false，且剩余元素不再进行检测
+                2.如果所有元素都满足条件，则返回true
+            注意：every()不会对空数组进行检测，every()不会改变原始数组。
+            
+            array.some(function(currentValue,index,arr),thisValue)
+            some()方法会依次执行数组的每个元素：
+                1.如果有一个元素满足条件，则表达式返回true，剩余元素不会再执行检测
+                2.如果没有满足条件的元素，怎返回false
+            注意：some()不会对空数组进行检测，some()不会改变原始数组。
+        */
+
+      //   let arr = ["hdcms", "houduren"];
+      //   arr.every(function(value, index, arr) {
+      //     console.log(value, index, arr);
+      //   });
+
+      // 判断是不是所有学生都及格
+      const user = [
+        { name: "李四", js: 10 },
+        { name: "王五", js: 67 },
+        { name: "老六", js: 59 }
+      ];
+      const result = user.every(function(student) {
+        return student.js >= 60;
+      });
+      console.log(result ? "全部同学及格" : "有同学没及格");
+
+      let keywords = ["php", "js"];
+      let title = document.querySelector('[name="title"]');
+      
+      title.addEventListener("keyup", function() {
+        const res = keywords.some(keyword => {
+          return this.value.includes(keyword);
+        });
+        document.querySelector("span").innerHTML = res
+          ? (document.querySelector("span").innerHTML = "")
+          : "必须包含" + keywords.join("") + "关键词";
+      });
+    </script>
+  </body>
+</html>

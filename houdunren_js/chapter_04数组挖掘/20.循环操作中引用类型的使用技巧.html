@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 引用类型
+      let lessons = [
+        { title: "媒体查询响应式布局", category: "css" },
+        { title: "FLEX 弹性盒模型", category: "css" },
+        { title: "MYSQL多表查询随意操作", category: "mysql" }
+      ];
+
+      //    for(let i = 0;i<lessons.length;i++){
+      //      lessons[i].title = 'houdunren'+ lessons[i].title
+      //    }
+
+      // for (const key in lessons) {
+      //    lessons[key].title='houduren'+lessons[key].title
+      // }
+
+      for (const value of lessons) {
+        value.title = "houdunren" + value.title;
+      }
+
+      console.log(lessons);
+
+      //   值类型
+      let arr = [1, 2, 3, 4, 5];
+      for (let value of arr) {
+        value += 10;
+      }
+      console.log(arr); // [1,2,3,4,5]
+    </script>
+  </body>
+</html>

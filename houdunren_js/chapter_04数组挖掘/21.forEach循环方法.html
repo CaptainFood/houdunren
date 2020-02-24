@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .disable {
+      color: #ddd;
+    }
+  </style>
+  <body>
+    <li>hdcms</li>
+    <li>houdunre</li>
+    <script>
+      /*
+            array.forEach(function(currentValue,index,arr),thisValue)
+            thisValue 可选，传给函数的值一般用“this”。
+            如果这个参数为空，'undefined'会传递给'this'值
+        */
+      let lessons = [
+        { title: "媒体查询响应式布局", category: "css" },
+        { title: "FLEX 弹性盒模型", category: "css" },
+        { title: "MYSQL多表查询随意操作", category: "mysql" }
+      ];
+      lessons.forEach(function(item, index, lessons) {
+        item.title = item.title.slice(0, 3);
+      });
+      //   console.table(lessons);
+
+      let lis = document.querySelectorAll("li");
+      console.log(lis);
+      lis.forEach(function(item) {
+        item.addEventListener("click", function() {
+          this.classList.toggle("disable");
+        });
+      });
+    </script>
+  </body>
+</html>

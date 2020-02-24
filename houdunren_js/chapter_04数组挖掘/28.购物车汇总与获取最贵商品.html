@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cart = [
+        { name: "iphone", price: 3000 },
+        { name: "ipad", price: 2000 },
+        { name: "imac", price: 10000 }
+      ];
+
+      // 获取最贵的商品
+      function maxPrice(goods) {
+        return goods.reduce(function(pre, cur) {
+          return pre.price > cur.price ? pre : cur;
+        });
+      }
+      console.log(maxPrice(cart));
+
+      // 获取商品的总价
+      function sumPrice(goods) {
+        return goods.reduce(function(total, cur) {
+          return (total += cur.price);
+        }, 0);
+      }
+      console.log(sumPrice(cart));
+    </script>
+  </body>
+</html>

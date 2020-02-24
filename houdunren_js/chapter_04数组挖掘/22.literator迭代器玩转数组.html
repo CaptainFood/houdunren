@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ["css", "js", "html"];
+      /*
+        keys()方法用于从数组创建一个包含 数组键 的可迭代对象
+        values()返回一个数组，其元素是在对象上找到的可枚举属性值
+        entries()返回一个数组的迭代对象，该对象包含数组的键值对
+      */
+      let keys = arr.keys();
+      let values = arr.values();
+      let entries = arr.entries();
+
+      //   console.log(keys); // Array Iterator {}
+      //   console.log(values); // Array Iterator {}
+      //   console.log(entries); // Array Iterator {}
+      //   console.log(keys.next()); //{value: 0, done: false} value表示索引
+      //   console.log(keys.next()); //{value: 1, done: false} done 表示是否完成
+      //   console.log(keys.next()); //{value: 2, done: false}
+      //   console.log(keys.next()); //{value: undefined, done: true}
+
+      //   let { value, done } = keys.next();
+      //   console.log(value, done);
+
+      while (({ value, done } = values.next()) && done == false) {
+        console.log(value);
+      }
+
+      //   for-of专门操作可迭代对象
+    //   console.log(values); // Array Iterator {}
+      
+      for (const value of arr.values()) {
+        console.log(value);
+      }
+
+      for (const [index,value] of arr.entries()) {
+          console.log(index,value); 
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4];
+      //   function filter(arr, except) {
+      //     let newArr = [];
+      //     for (const value of arr) {
+      //       if (!except.includes(value)) {
+      //         newArr.push(value);
+      //       }
+      //     }
+      //     return newArr;
+      //   }
+      //   console.log(filter(arr, [2, 3]));
+
+      function filter(arr, callback) {
+        let newArr = [];
+        for (const value of arr) {
+          if (callback(value)) {
+            newArr.push(value);
+          }
+        }
+        return newArr;
+      }
+      console.log(
+        filter(arr,function(item) {
+          return item > 1;
+        })
+      );
+    </script>
+  </body>
+</html>

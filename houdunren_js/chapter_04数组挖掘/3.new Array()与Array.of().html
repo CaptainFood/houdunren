@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = new Array(6, 5, 5, 3);
+      console.log(arr); // [6,5,5,3]
+
+      let arr2 = Array.of(6, 5, 5, 3);
+      console.log(arr2); // [6,5,5,3]
+
+      let hd = new Array(6); // [empty*6]
+      let hd2 = Array.of(6); // [6]
+      console.log(hd, hd2);
+      console.log(hd[0], hd2[0]); // undefined,6
+      console.log(hd.length, hd2.length); // 6,1
+    </script>
+  </body>
+</html>

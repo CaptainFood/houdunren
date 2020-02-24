@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // array.find(function(currentValue,index,arr),thisValue)
+      let arr = [1, 2, 4, 5, 6];
+      let res = arr.find(function(item) {
+        return item == 4;
+      });
+      //   let res = arr.find(item => item == 4);
+      console.log(res);
+      console.log(arr);
+
+      let lessons = [{ name: "js" }, { name: "css" }, { name: "mysql" }];
+      let result = lessons.find(function(item) {
+        return (item.name == "css");
+      });
+      console.log(result); // {name: "css"}
+      console.log(lessons);
+
+
+      let indexResult = lessons.findIndex(function(item) {
+        return item.name == "js";
+      });
+      console.log(indexResult);
+
+      console.log(lessons);
+      
+    </script>
+  </body>
+</html>

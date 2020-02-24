@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hd = [1, 2, 3, 4, 5];
+
+      //   hd=[];
+
+      //   hd.length = 0;
+
+      //   hd.splice(0, hd.length);
+
+      while (hd.pop()) {
+        console.log(hd); //pop()返回删除元素
+      }
+
+      //   console.log(hd);
+
+      let arr = hd;
+      console.log(arr == hd); // true  内存地址相等
+
+      //   arr.length = 0;
+      //   console.log(arr,hd); // [] []
+
+      hd.length = 0;
+      arr = [];
+      console.log(arr == hd); // false
+
+    </script>
+  </body>
+</html>

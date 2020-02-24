@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function move(arr, from, to) {
+        if (from < 0 || to >= arr.length) {
+          console.log("参数错误");
+          return;
+        }
+        const newArr = [...arr];
+        let item = newArr.splice(from, 1); // 返回被删除的数组
+        newArr.splice(to, 0, ...item);
+        return newArr;
+      }
+      let arr = ["第一", "第二", "第三", "第四"];
+
+      console.log(move(arr, 0, 3)); // ["第二", "第三", "第四", "第一"]
+    </script>
+  </body>
+</html>
