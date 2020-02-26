@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Symbol用于防止属性名冲突而产生的，比如向第三方对象中添加属性时。
+            Symbol的值是唯一的，独一无二的，不会重复的。
+        */
+
+        let hd = Symbol();
+        let edu = Symbol();
+        console.log(hd,edu);  // Symbol() Symbol()
+        console.log(hd == edu);  // false
+
+        hd.name = 'houduren';
+        console.log(hd);  // Symbol()
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Symbol.for 根据描述获取Symbol，如果不存在则新建一个Symbol
+            使用Symbol.for会在系统中将Symbol登记
+            使用Symbol则不会登记
+      */
+
+      let hd = Symbol.for("houdunren");
+      let edu = Symbol.for("houdunren");
+      console.log(hd, edu);
+      console.log(hd == edu); // true
+
+      // Symbol.keyFor 根据使用Symbol.for登记的Symbol返回描述，如果找不到返回undefined
+      let hdl = Symbol.for("liaoji");
+      console.log(Symbol.keyFor(hdl)); // liaoji
+
+      let zz = Symbol("asdfas");
+      console.log(Symbol.keyFor(zz)); // undefined
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 不能用 new Symbol()
+      // let hd = new Symbol(); // Symbol is not a constructor at new Symbol (<anonymous>)
+
+      //   可传入字符串用于描述Symbol,方便在控制台分辨Symbol
+      let edu = Symbol("world");
+      let ho = Symbol("hellop");
+      console.log(edu, ho); //Symbol(world) Symbol(hellop)
+
+      console.log(typeof edu); // symbol
+      //   将symbol转换为字符串
+      console.log(edu.toString()); // Symbol(world)
+
+      //   传入相同参数Symbol也是独立唯一的，因为参数只是描述而已，但使用Symbol.for则不会
+      let a = Symbol("liaoji");
+      let b = Symbol("liaoji");
+      console.log(a == b); // false
+
+      // 使用description可以获取传入的描述参数
+      console.log(a.description); // liaoji
+    </script>
+  </body>
+</html>
