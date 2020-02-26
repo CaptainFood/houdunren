@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let set = new Set(["hdcms", "houdunren"]);
+
+      // Array.from 将set转回数组
+      console.log(Array.from(set)); // ["hdcms", "houdunren"]
+      // [...set]
+      console.log([...set]); // ["hdcms", "houdunren"]
+
+      let hd = new Set("123456789");
+      console.log(hd);
+
+      // set 转数组，过滤出小于5，再转set
+      hd = new Set([...hd].filter(item => item < 5));
+      console.log(hd);
+
+      //  数组去重
+      let arr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+      arr = [...new Set(arr)];
+      //   arr = Array.from(new Set(arr));
+      console.log(arr); // [1, 2, 3, 4, 5]
+    </script>
+  </body>
+</html>

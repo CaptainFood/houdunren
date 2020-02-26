@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 1, 1, 1];
+      let set = new Set(arr);
+      console.log(set); //Set(3) {1, 2, 3}
+
+      // set添加元素
+      set.add("1");
+      set.add([4, 5]);
+      console.log(set); //Set(5) {1, 2, 3, "1", Array(2)}
+
+      let obj = {
+        1: "hdcms",
+        "1": "baidu"
+      };
+      console.log(obj); // {1: "baidu"}
+
+      let hd = {
+          [obj]:'houdunren'
+      }
+      console.log(hd); // {[object Object]: "houdunren"}
+      console.log(hd[obj.toString()]);  // houdunren
+      
+    </script>
+  </body>
+</html>

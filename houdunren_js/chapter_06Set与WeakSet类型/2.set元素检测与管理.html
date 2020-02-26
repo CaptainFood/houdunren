@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let set =new Set('houdunren')
+
+        // 使用扩展运算符...
+        console.log(set);
+        
+        console.log(set.size);  // 7
+        
+        console.log(set.has('o')); //true
+
+        console.log(set.delete('o')); //删除成功后返回true
+        
+        console.log(set.values());
+        
+        console.log(set.clear(),set.size); // 清空set，无返回值  0
+        
+    </script>
+</body>
+</html>
