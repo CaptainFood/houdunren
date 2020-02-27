@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        /* 连续的空白符会被保留 */
+        white-space: pre;
+
+        /* 保留换行符，保留空白和制表符 */
+        white-space: pre-wrap;
+
+        /* 保留换行符，合并空白和制表符 */
+        white-space: pre-line;
+
+        /* 合并换行符，合并空白和制表符 */
+        white-space: nowrap;
+      }
+
+      .wrap {
+        padding: 20px;
+      }
+
+      .div1 {
+        /* 单行超出部分...显示 */
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .div2 {
+        /* 多行文本溢出...显示 */
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /* 控制文字行数 */
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+
+  <body>
+    <body>
+      <article>
+        <h2>houd ren com</h2>
+        <div class="wrap">
+          <div class="div1">
+            后盾人自2010年创立至今，免费发布了大量的高质量
+            教学视频，收到广大it从业者的热爱。
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="div2">
+            后盾人自2010年创立至今，免费发布了大量的高质量
+            教学视频，收到广大it从业者的热爱。
+          </div>
+        </div>
+      </article>
+    </body>
+  </body>
+</html>
