@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hd = { name: "houduren" };
+      let edu = hd;
+
+      // 弱引用
+      let ws = new WeakSet();
+      ws.add(hd); // 引用计数器 不会加 1
+        hd = null;
+        edu = null;
+    //   console.log(ws);
+
+      setTimeout(() => {
+        console.log(ws);
+      }, 2000);
+    </script>
+  </body>
+</html>

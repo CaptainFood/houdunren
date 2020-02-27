@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let set = new Set(["hdmcd", "houdunren"]);
+      console.log(set.values()); // SetIterator {"hdmcd", "houdunren"}
+      console.log(set.keys()); // SetIterator {"hdmcd", "houdunren"}
+      console.log(set.entries()); // SetIterator {"hdmcd" => "hdmcd", "houdunren" => "houdunren"}
+
+      set.forEach((key, value) => {
+        console.log(key, value);
+      });
+
+      for (const value of set) {
+        console.log(value);
+      }
+    </script>
+  </body>
+</html>

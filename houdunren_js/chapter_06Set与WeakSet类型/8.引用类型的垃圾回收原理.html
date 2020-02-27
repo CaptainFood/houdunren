@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hd = { name: "houduren" }; // 引用1次
+      let edu = hd; // 引用2次
+      let arr = [hd];
+      hd = null; // 减少1次
+      edu = null; // 减少2次
+      arr[0] = null;
+      console.log(arr);
+
+      //   如果没有引用对象的地址，则会自动垃圾回收
+    </script>
+  </body>
+</html>

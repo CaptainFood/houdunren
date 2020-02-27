@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <script>
+      let ws = new WeakSet();
+      //   不能有重复的值
+      let obj = { name: "liaoji", age: 18 };
+      ws.add(obj);
+      ws.add(obj);
+      ws.add(["houd", "zcxvk"]);
+      console.log(ws);
+
+      let nodes = new WeakSet();
+      let divs = document.querySelectorAll("div");
+      divs.forEach(item => {
+        nodes.add(item);
+      });
+
+      //   移除元素
+      console.log(nodes.delete(divs[0])); // true
+      console.log(nodes); // WeakSet {div, div}
+    </script>
+  </body>
+</html>
