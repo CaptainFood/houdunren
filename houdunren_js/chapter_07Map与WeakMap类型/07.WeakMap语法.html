@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>hdcms</div>
+    <div>houduren</div>
+    <script>
+      /*
+            weakMap里的 键 只能是对象
+        */
+      let divs = document.querySelectorAll("div");
+      let map = new WeakMap();
+      divs.forEach(item => map.set(item, item.innerHTML));
+      console.log(map);
+
+      let arr = [];
+      let map2 = new WeakMap();
+      map2.set(arr, "hdcms");
+      map2.delete(arr);
+
+      console.log(map2.has(arr));
+
+      console.log(map2);
+      //   key(),values(),entries()都不能使用
+    //   forof 不能使用， weakMap类型是弱引用类型，是不可迭代的，和weakSet一样
+    </script>
+  </body>
+</html>

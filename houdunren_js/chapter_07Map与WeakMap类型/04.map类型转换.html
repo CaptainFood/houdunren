@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hd = new Map([
+        ["houdunren", "后盾人"],
+        ["baidu", "百度"],
+        ["github", "代码库"]
+      ]);
+
+      console.log(hd);
+
+      // map 类型转换为数组
+      console.log([...hd]);
+
+      console.log([...hd.keys()]);
+      console.log([...hd.values()]);
+      console.log([...hd.entries()]);
+
+      for (const iterator of hd) {
+        console.log(iterator);
+      }
+      for (const [key, value] of hd) {
+        console.log(key, value);
+      }
+
+      let newArr = [...hd].filter(item => {
+        return item[1].includes("后盾人");
+      });
+      console.log(newArr);
+      let newMap = new Map(newArr);
+      console.log(newMap);
+      
+    </script>
+  </body>
+</html>

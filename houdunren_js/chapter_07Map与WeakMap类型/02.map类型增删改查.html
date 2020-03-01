@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        map.set()存值 map.get()取值 map.delete()删除 map.clear()清空 map.has()判断
+      */
+      let map = new Map();
+      let obj = {
+        name: "liaoji"
+      };
+      map.set(obj, "liaoji.com");
+
+      console.log(map.get(obj)); // liaoji.com
+
+      map.set(1, "hello");
+      console.log(map.get(1));
+
+      map.delete(1);
+      // map.clear()
+
+      console.log(map.has(obj)); // true
+
+      console.log(map);
+    </script>
+  </body>
+</html>

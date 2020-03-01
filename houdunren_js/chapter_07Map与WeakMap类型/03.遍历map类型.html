@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hd = new Map([
+        ["houdunren", "后盾人"],
+        ["baidu", "百度"],
+        ["github", "代码库"]
+      ]);
+      hd.set("name", "在线教程");
+
+      console.log(hd.keys());
+      console.log(hd.values());
+      console.log(hd.entries());
+
+      let arr = [233, 444, 556];
+      console.log(Array.isArray(arr));
+      console.log(arr);
+
+      for (const [value, key] of arr.entries()) {
+        console.log(value, key);
+      }
+
+      // forof 遍历
+      for (const [key, value] of hd.entries()) {
+        console.log(key, value);
+        console.log(Array.isArray(value));
+      }
+
+      // forEach 遍历
+      hd.forEach((value, key) => {
+        console.log(value, key);
+      });
+    </script>
+  </body>
+</html>

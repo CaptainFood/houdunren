@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     // 引用计数器
+      let hd = { name: "houdunren" }; // +1
+      //   cms = hd;  // +1
+      //   hd = null; // -1
+      //   cms= null; // -1
+
+      let map = new WeakMap();
+      map.set(hd, "houdunren.com");
+      hd = null;
+      console.log(map);
+
+      
+      setTimeout(function() {
+        console.log(map);
+      }, 1000);
+    </script>
+  </body>
+</html>
