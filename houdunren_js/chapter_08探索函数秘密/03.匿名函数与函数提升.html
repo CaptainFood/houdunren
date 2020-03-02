@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 匿名函数
+      let hd = function() {
+        console.log("后盾人");
+      };
+
+      console.log(hd instanceof Object); // true
+
+      let cms = hd; // 引用类型赋值
+      cms(); // 后盾人
+
+      // 函数提升
+      show();
+      function show() {
+        console.log("houdunren.com");
+      }
+
+      function sum(...args) {
+        // console.log(args);
+        return args.reduce(function(a, b) {
+          return a + b;
+        });
+      }
+      console.log(sum(1, 2, 3, 4, 5, 6));
+    </script>
+  </body>
+</html>

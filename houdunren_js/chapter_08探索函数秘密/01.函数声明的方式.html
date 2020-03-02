@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.new Function
+      let func = new Function("title", "console.log(title)"); // 前面是参数，后面是函数体
+      func("后盾人");
+
+      // 2.
+      function hd(title) {
+        console.log(title);
+      }
+      hd("nihao");
+
+      //   3.
+      let cms = function(title) {
+        console.log(title);
+      };
+      cms("houdunren");
+
+      let user = {
+        name: null,
+        setName(name) {
+          this.name = name;
+        },
+        getName() {
+          return this.name;
+        }
+      };
+
+
+      user.setName('liaoji')
+      console.log(user.getName()    );
+      
+    </script>
+  </body>
+</html>

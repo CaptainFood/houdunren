@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function hd() {
+        console.log("houdunren");
+      }
+      window.hd()
+      console.log(window.screenX);
+      console.log(window.screenY);
+      function screenX(){
+        console.log('houdren');
+      }
+      console.log(window.screenX()); 
+      
+      var cms = function (){
+        console.log('houdunren.com');
+      }
+      window.cms()
+
+      // 使用let 则不会往window里添加cm方法
+      let cm = function (){
+        console.log('houdunren');
+      }
+      window.cm()  //window.cm is not a function 
+
+</script>
+  </body>
+</html>
