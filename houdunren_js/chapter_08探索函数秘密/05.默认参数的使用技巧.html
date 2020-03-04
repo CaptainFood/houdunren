@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>I am watching av</div>
+    <script>
+      function avg(total, year = 1) {
+        return Math.round(total / year);
+      }
+      console.log(avg(2000, 2));
+
+      function sort(arr, type = "asc") {
+        return arr.sort((a, b) => (type === "asc" ? a - b : b - a));
+      }
+      console.log(sort([3, 4, 5, 3, 6, 1]));
+      console.log(sort([3, 4, 5, 3, 6, 1], "desc"));
+
+      function event() {
+        console.log(this.innerHTML);
+      }
+      document.querySelector("div").addEventListener("click", event);
+
+      //   arguments
+      function sum(...args) {
+        // console.log(args);  //[1, 23, 4, 56, 7]
+        return args.reduce((pre, cur) => pre + cur);
+      }
+      console.log(sum(1, 23, 4, 56, 7));
+    </script>
+  </body>
+</html>

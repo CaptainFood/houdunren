@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let lessons = [
+        { title: "flex", click: 11 },
+        { title: "av", click: 31 },
+        { title: "zcxv", click: 41 }
+      ];
+      // 添加个计数器i
+      function change(lessons, num = 100, i = 0) {
+        if (lessons.length === i) {
+          return lessons;
+        }
+        lessons[i].click += num;
+        return change(lessons, num, ++i); // ++i
+      }
+      console.table(change(lessons));
+    </script>
+  </body>
+</html>
